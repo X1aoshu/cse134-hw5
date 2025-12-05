@@ -15,6 +15,7 @@
 
   <script src="js/theme-toggle.js" defer></script>
   <script src="js/project-card.js" defer></script>
+  <script src="js/projects-page.js" defer></script>
 </head>
 <body>
   <nav aria-label="Main navigation" class="site-nav">
@@ -40,49 +41,16 @@
       <p>Selected engineering, product, and entrepreneurial work that bridges hardware, software, and user needs.</p>
     </header>
 
-    <project-card
-      title="Custom 16-bit Pipelined Processor"
-      timeframe="03/2025 – 06/2025 · UC San Diego"
-      desc="Designed a five stage pipelined 16 bit CPU from the ISA up, including datapath, ALU, control logic, hazard detection, and forwarding. Implemented the design in SystemVerilog, wrote directed and random tests, and deployed to an FPGA board to run benchmark programs such as matrix multiply and Fibonacci in hardware. Focused on balancing clock frequency, resource usage, and clarity of the microarchitecture."
-      tags="SystemVerilog, FPGA, CPU design, Pipelining"
-      image="PIPLINE.png"
-      alt="Diagram for a custom 16 bit processor project"
-      link="https://github.com/X1aoshu"
-      link-label="View related repository">
-    </project-card>
+    <section class="projects-controls" aria-label="Project data controls">
+      <p>
+        <button id="btn-load-local" type="button">Load Local</button>
+        <button id="btn-load-remote" type="button">Load Remote</button>
+      </p>
+      <p id="projects-status" aria-live="polite"></p>
+    </section>
 
-    <project-card
-      title="Mobile App Prototype — Team Lead"
-      timeframe="01/2025 – 03/2025 · UC San Diego"
-      desc="Led a six person team to design and prototype a mobile application from zero, using agile iterations, sprint planning, and retrospectives. Applied behaviour driven development and design by contract to keep requirements, test cases, and implementation aligned. Set up CI and basic automated checks so that every pull request was validated before merging, which helped the team deliver an on time and stable MVP."
-      tags="Team leadership, Mobile UX, BDD, CI/CD"
-      image="cse.png"
-      alt="UCSD CSE Department LOGO"
-      link="https://example.com/mobile-case-study"
-      link-label="Read project summary">
-    </project-card>
-
-    <project-card
-      title="RoundSense — Competitive Gaming Insights"
-      timeframe="07/2025 – Present · Founder and Product Lead"
-      desc="Defined RoundSense as a subscription based tactical assistant for competitive gamers starting with Valorant. Researched the ecosystem of existing analytics tools, mapped the gaps between what high level players want and what current tools provide, and then scoped an MVP that combines an in game overlay with a Discord bot. Built an initial financial and market model to understand pricing, acquisition channels, and realistic first year goals."
-      tags="Product design, Esports analytics, Startup, Business modeling"
-      image="RoundSense.png"
-      alt="LOGO of RoundSense"
-      link="https://example.com/roundsense-overview"
-      link-label="See product concept">
-    </project-card>
-
-    <project-card
-      title="TreeVerse Technology — HNW Travel Services"
-      timeframe="05/2023 – Present · Founder and Operator"
-      desc="Founded TreeVerse to serve high net worth clients with custom travel planning that goes beyond standard tour packages. Built and managed an eight person team, negotiated long term partnerships with overseas suppliers, and designed internal processes for quoting, risk checking, and on trip support. Currently exploring how lightweight automation and future AI tools can help the team detect issues earlier, such as weather disruptions and regulatory changes."
-      tags="Operations, Travel industry, Partnerships, Risk management"
-      image="TreeVerse.png"
-      alt="LOGO of TreeVerse"
-      link="https://example.com/treeverse-story"
-      link-label="Learn about TreeVerse">
-    </project-card>
+    <section id="projects-grid" aria-label="Projects list" aria-live="polite">
+    </section>
   </main>
 
   <footer class="site-footer" role="contentinfo">

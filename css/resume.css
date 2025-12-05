@@ -187,3 +187,45 @@ main section li{
   }
   .site-nav, .site-footer { display: none !important; } 
 }
+
+main > section.resume-data-controls {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.resume-data-controls p {
+  margin: 0.25rem 0;
+}
+
+.resume-data-controls button {
+  margin: 0 0.4rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.resume-data-controls button:hover,
+.resume-data-controls button:focus-visible {
+  background: #e5e7eb;
+}
+
+#resume-data-status {
+  font-size: 0.9rem;
+  color: var(--muted, #555);
+}
+
+@media (min-width: 1025px) {
+  main > section.resume-data-controls {
+    grid-column: 1 / -1;
+  }
+}
+
