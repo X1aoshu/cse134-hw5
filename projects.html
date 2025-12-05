@@ -8,11 +8,13 @@
   <meta charset="utf-8">
   <title>Projects — Shuting Chen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/projects.css">
   <link rel="stylesheet" href="css/theme-toggle.css">
-  <script src="js/theme-toggle.js" defer></script>
 
+  <script src="js/theme-toggle.js" defer></script>
+  <script src="js/project-card.js" defer></script>
 </head>
 <body>
   <nav aria-label="Main navigation" class="site-nav">
@@ -35,60 +37,52 @@
   <main>
     <header>
       <h1>Projects</h1>
-      <p>Selected engineering and product initiatives.</p>
+      <p>Selected engineering, product, and entrepreneurial work that bridges hardware, software, and user needs.</p>
     </header>
 
-    <article>
-      <h2>Custom 16-bit Pipelined Processor</h2>
-      <svg viewBox="0 0 220 60" width="220" height="60" role="img" aria-label="Chip icon">
-        <rect x="40" y="10" width="140" height="40" rx="6" ry="6" fill="#fff" stroke="#000" stroke-width="2"/>
-        <g stroke="#000" stroke-width="2">
-          <line x1="40" y1="18" x2="20" y2="18"/><line x1="40" y1="30" x2="20" y2="30"/><line x1="40" y1="42" x2="20" y2="42"/>
-          <line x1="180" y1="18" x2="200" y2="18"/><line x1="180" y1="30" x2="200" y2="30"/><line x1="180" y1="42" x2="200" y2="42"/>
-        </g>
-        <text x="110" y="36" text-anchor="middle" font-family="sans-serif" font-size="12">CHIP</text>
-      </svg>
+    <project-card
+      title="Custom 16-bit Pipelined Processor"
+      timeframe="03/2025 – 06/2025 · UC San Diego"
+      desc="Designed a five stage pipelined 16 bit CPU from the ISA up, including datapath, ALU, control logic, hazard detection, and forwarding. Implemented the design in SystemVerilog, wrote directed and random tests, and deployed to an FPGA board to run benchmark programs such as matrix multiply and Fibonacci in hardware. Focused on balancing clock frequency, resource usage, and clarity of the microarchitecture."
+      tags="SystemVerilog, FPGA, CPU design, Pipelining"
+      image="PIPLINE.png"
+      alt="Diagram for a custom 16 bit processor project"
+      link="https://github.com/X1aoshu"
+      link-label="View related repository">
+    </project-card>
 
-      <p>03/2025 – 06/2025 · UC San Diego (Supervisor: John A. Eldon)</p>
-      <ul>
-        <li>Defined ISA and implemented datapath, ALU, control, and memory interface in SystemVerilog.</li>
-        <li>Validated through assembly simulation and FPGA deployment; executed all benchmark programs stably.</li>
-      </ul>
-      <h3>Development Steps</h3>
-      <ol>
-        <li>Define architecture and requirements</li>
-        <li>Implement modules in SystemVerilog</li>
-        <li>Run simulations and debug</li>
-        <li>Deploy on FPGA board</li>
-      </ol>
-    </article>
+    <project-card
+      title="Mobile App Prototype — Team Lead"
+      timeframe="01/2025 – 03/2025 · UC San Diego"
+      desc="Led a six person team to design and prototype a mobile application from zero, using agile iterations, sprint planning, and retrospectives. Applied behaviour driven development and design by contract to keep requirements, test cases, and implementation aligned. Set up CI and basic automated checks so that every pull request was validated before merging, which helped the team deliver an on time and stable MVP."
+      tags="Team leadership, Mobile UX, BDD, CI/CD"
+      image="cse.png"
+      alt="UCSD CSE Department LOGO"
+      link="https://example.com/mobile-case-study"
+      link-label="Read project summary">
+    </project-card>
 
-    <article>
-      <h2>Mobile App Prototype — Team Lead</h2>
-      <p>01/2025 – 03/2025 · UC San Diego (Supervisor: Bill Griswold)</p>
-      <ul>
-        <li>Led a 6-person team; handled requirements, sprint planning, and retrospectives using BDD and Design-by-Contract.</li>
-        <li>Maintained quality with unit tests, mocks, CI/CD (GitHub Actions), and peer reviews; delivered an on-time MVP.</li>
-      </ul>
-    </article>
+    <project-card
+      title="RoundSense — Competitive Gaming Insights"
+      timeframe="07/2025 – Present · Founder and Product Lead"
+      desc="Defined RoundSense as a subscription based tactical assistant for competitive gamers starting with Valorant. Researched the ecosystem of existing analytics tools, mapped the gaps between what high level players want and what current tools provide, and then scoped an MVP that combines an in game overlay with a Discord bot. Built an initial financial and market model to understand pricing, acquisition channels, and realistic first year goals."
+      tags="Product design, Esports analytics, Startup, Business modeling"
+      image="RoundSense.png"
+      alt="LOGO of RoundSense"
+      link="https://example.com/roundsense-overview"
+      link-label="See product concept">
+    </project-card>
 
-    <article>
-      <h2>RoundSense — Competitive Gaming Insights (Founder)</h2>
-      <p>07/2025 – Present · Product &amp; Business</p>
-      <ul>
-        <li>Defined MVP (Valorant tips overlay + Discord bot); roadmap includes training suite and multi-game expansion.</li>
-        <li>Market analysis across 5 gaming analytics platforms; built TAM/SAM and pricing models.</li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>TreeVerse Technology — HNW Travel Services (Founder)</h2>
-      <p>05/2023 – Present · Operations &amp; Strategy</p>
-      <ul>
-        <li>Negotiated 14 supplier partnerships, up to 45% below market; served 2,000+ HNW clients across US/EU.</li>
-        <li>Planned AI-based risk management for IRROPs and a CRM to improve retention.</li>
-      </ul>
-    </article>
+    <project-card
+      title="TreeVerse Technology — HNW Travel Services"
+      timeframe="05/2023 – Present · Founder and Operator"
+      desc="Founded TreeVerse to serve high net worth clients with custom travel planning that goes beyond standard tour packages. Built and managed an eight person team, negotiated long term partnerships with overseas suppliers, and designed internal processes for quoting, risk checking, and on trip support. Currently exploring how lightweight automation and future AI tools can help the team detect issues earlier, such as weather disruptions and regulatory changes."
+      tags="Operations, Travel industry, Partnerships, Risk management"
+      image="TreeVerse.png"
+      alt="LOGO of TreeVerse"
+      link="https://example.com/treeverse-story"
+      link-label="Learn about TreeVerse">
+    </project-card>
   </main>
 
   <footer class="site-footer" role="contentinfo">
@@ -125,4 +119,3 @@
   </footer>
 </body>
 </html>
-
